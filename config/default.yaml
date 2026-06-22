@@ -1,0 +1,18 @@
+seed: 42
+min_vehicle_condition: 0.25
+liquidity_reserve_days: 5
+default_hours: 168
+repair_cost: 250
+hire_cost: 500
+vehicle_cost: 2500
+station_cost: 5000
+live_url: "https://game.rescue-operator.com"
+live_headless: true
+browser_selectors:
+  state_json_selector: "#rescue-operator-state"
+  dispatch_button_template: '[data-action="dispatch"][data-mission="{mission_id}"][data-vehicle="{vehicle_id}"]'
+  repair_button_template: '[data-action="repair"][data-vehicle="{vehicle_id}"]'
+assumptions:
+  - "Der Simulator ist das Standardziel; ein Live-Betrieb gegen game.rescue-operator.com benötigt eine autorisierte, dokumentierte Schnittstelle des Betreibers."
+  - "Eine simulierte Minute entspricht einem Planungsschritt."
+  - "Fahrzeiten werden als euklidische Distanz in Minuten angenähert."
